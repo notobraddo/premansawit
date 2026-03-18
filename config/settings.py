@@ -68,5 +68,5 @@ LOG_FILE = "logs/bot.log"
 TURN_INTERVAL = 60               # Seconds between turns (DO NOT CHANGE)
 POLL_INTERVAL_WAITING = 5        # Seconds between polls when waiting for game
 POLL_INTERVAL_DEAD = 60          # Seconds between polls when dead/idle
-ROOM_HUNT_INTERVAL = 2           # Aggressive polling interval when hunting for rooms
+ROOM_HUNT_INTERVAL = 5           # Aggressive polling interval when hunting for rooms
 HEARTBEAT_INTERVAL = 300         # Seconds between idle heartbeat checks (5 min)
