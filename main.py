@@ -513,10 +513,9 @@ class GameLoop:
                     logger.debug(f"Free action failed ({e.code}): {e}")
 
             # ── MAIN TURN ACTION ─────────────────────────────────────
-            thought = {
-                "reasoning"   : reasoning,
-                "plannedAction": main_action.get("type"),
-            }
+            # [FIX-R4] Informative thoughts attract sponsors (revealed after ~1min)
+            thought = self.strategy.build_thought(intel, reasoning)
+            thought["plannedAction"] = main_action.get("type")
 
             try:
                 result = self.api.take_action(
